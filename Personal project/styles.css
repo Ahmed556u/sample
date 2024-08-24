@@ -1,0 +1,324 @@
+/* Header */
+header{
+
+  /* colors */
+  color: #ffffff;
+  background: rgb(20, 39, 61);
+
+  /* position */
+  position: fixed;
+  height: 7%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
+  /* flex for items */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  /* Transitions */
+  transition: box-shadow 0.5s ease, background 0.5s ease;
+
+}
+
+/* Add shadow & blur on scrolling */
+header.shadow{
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  background: none;
+
+}
+
+/*light-dark button*/
+#themeButton{
+
+  /* Colors */
+  background: none;
+  color: white;
+
+  /* Dimensions */
+  height: 4vh;
+  width: 4vh;
+  border-radius: 2cap;
+
+  /* aligining */
+  text-align: center;
+
+  border: none;
+
+  /* Transitions */
+  transition: background 0.3s , font-size 0.3s;
+}
+
+#themeButton:hover{
+
+  font-size: large;
+  background: #6464648c;
+  transition: background 0.3s , font-size 0.3s;
+}
+
+/* class for list of sections */
+.navList{
+
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+/* classes for each item in sections list */
+.navElement{
+
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 4vh;
+  padding-right: 4vh;
+  padding-bottom: 2.4vh;
+  padding-top: 2.4vh;
+
+  /* transition */
+  transition: background-color 0.3s ease;
+
+}
+
+.navElement:hover{
+
+  background-color: #B0B0B0;
+
+}
+
+body{
+
+  background: #F5F5F5;
+  color: #d6d4d4;
+  width: 100%;
+  margin: auto;
+  transition: background 0.6s;
+
+  /* Background image */
+  background-image: url(bg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* dark theme */
+body.dark{
+
+  background-color: #1C2833;  
+  color: #E0E0E0;
+  width: 100%;
+  margin: auto;
+  transition: background 0.6s;
+
+}
+
+#pageHeader{
+
+  margin-left: 5vh ;
+  font-size: 50px;
+
+}
+
+main {
+
+  /* Main content page properties */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+
+}
+
+section{
+
+  /* Inner text properties */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30vh;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: large;
+
+  /* dimensions */
+  width: 99.9%;
+  margin: 20vh;
+
+  /* Bg color */
+  background: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0.3, 0.3, 0.3, 0.3);
+
+  /* transition */
+  transition: font-size 0.6s;
+
+}
+
+section.active{
+
+  font-size: x-large;
+
+}
+
+.readMore{
+
+  text-decoration: none;
+  color: #B0B0B0;
+  text-align: center;
+
+}
+
+h1{
+
+  font-family: "Comic Neue", cursive;
+  font-weight: bold;
+  font-style: normal;
+
+  /* transitions */
+
+}
+
+li::marker {
+
+  content: "";
+
+}
+
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+footer{
+
+  /* bg color */
+  color: #ffffff;
+  background: rgb(20, 39, 61);
+
+  /* Dimensions */
+  height: 5%;
+  width: 100%;
+
+  /* aligning properties */
+  text-align: center;
+
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footerElement{
+
+  text-decoration: none;
+  color: #ffffff;
+
+  /* Padding */
+  padding: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+
+  /* transitions */
+  transition: background-color 0.3s;
+
+}
+
+.copyRight{
+
+  /* Padding */
+  padding: 2vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+
+}
+
+.footerElement:hover{
+
+  background-color: #B0B0B0;
+
+}
+
+/* Animation from codepen */
+:root {
+  --animation-duration: 3s;
+  --text-length: 22;
+}
+
+.wrapper {
+  display: grid;
+  height: 100vh;
+  place-items: center
+}
+
+.typing {
+  animation: typing var(--animation-duration) steps(var(--text-length)), blink .5s step-end infinite alternate;
+  border-right: 3px solid;
+  font: 600 clamp(2rem, 10vw, 8rem) monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  width: calc(var(--text-length) * 1ch);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Some font stuff */
+.comic-neue-light {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+  
+.comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-neue-bold {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.comic-neue-light-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.comic-neue-regular-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.comic-neue-bold-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* media q's */
